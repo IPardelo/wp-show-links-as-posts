@@ -1,0 +1,52 @@
+/* Wordpress Show Links as Posts — formulario de ligazón. */
+.wpslap-form .wpslap-inline {
+	display: inline-block;
+	margin-top: 8px;
+}
+
+.wpslap-sources {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 18px;
+	margin-bottom: 12px;
+}
+
+.wpslap-preview:not(:empty) {
+	margin: 8px 0;
+}
+
+.wpslap-preview img {
+	display: block;
+	max-width: 300px;
+	max-height: 200px;
+	height: auto;
+	border: 1px solid #dcdcde;
+	border-radius: 2px;
+}
+
+.wpslap-source-library .button-link-delete {
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.wpslap-cats {
+	max-width: 400px;
+	max-height: 220px;
+	overflow: auto;
+	padding: 6px 10px;
+	border: 1px solid #dcdcde;
+	background: #fff;
+}
+
+.wpslap-cats .categorychecklist {
+	margin: 0;
+}
+
+.wpslap-cats .children {
+	margin-left: 18px;
+}
+
+.wpslap-form .submit .wpslap-delete {
+	margin-left: 14px;
+	color: #b32d2e;
+}
