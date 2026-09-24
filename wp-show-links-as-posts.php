@@ -3,7 +3,7 @@
  * Plugin Name:       Wordpress Show Links as Posts
  * Plugin URI:        https://github.com/IPardelo/wp-show-links-as-posts
  * Description:       Engade ligazóns como se fosen entradas.
- * Version:           1.1.0
+ * Version:           1.3.0
  * Requires at least: 5.6
  * Requires PHP:      7.2
  * Author:            IPardelo
@@ -16,7 +16,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'WPSLAP_VERSION', '1.1.0' );
+define( 'WPSLAP_VERSION', '1.3.0' );
 define( 'WPSLAP_FILE', __FILE__ );
 define( 'WPSLAP_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WPSLAP_URL', plugin_dir_url( __FILE__ ) );
@@ -54,6 +54,7 @@ function wpslap_is_link_post( $post = null ) {
 require_once WPSLAP_DIR . 'includes/class-wpslap-admin.php';
 require_once WPSLAP_DIR . 'includes/class-wpslap-frontend.php';
 require_once WPSLAP_DIR . 'includes/class-wpslap-shortcode.php';
+require_once WPSLAP_DIR . 'includes/class-wpslap-importer.php';
 require_once WPSLAP_DIR . 'includes/class-wpslap-images.php';
 
 add_action(
@@ -64,6 +65,7 @@ add_action(
 		WPSLAP_Shortcode::init();
 		if ( is_admin() ) {
 			WPSLAP_Admin::init();
+			WPSLAP_Importer::init();
 			WPSLAP_Images::init();
 		}
 	}
